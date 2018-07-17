@@ -13,5 +13,12 @@ namespace HelloWorldReact.Controllers
         {
             return View();
         }
+
+        //public ActionResult GetName()
+        public JsonResult GetName()
+        {
+            //return Json("World from server side",JsonRequestBehavior.AllowGet);
+            return Json(new { name = "World from server side" }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
